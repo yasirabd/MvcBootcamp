@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "DataSample";
+}
+
+<h2>DataSample</h2>
+<p>Event : @ViewData["event"]</p>
+<p>Place : @ViewData["place"]</p>
+
+<hr />
+
+<p>Event : @ViewBag.events</p>
+<p>Place : @ViewBag.places</p>
+
+<hr />
+
+<table>
+    <thead>
+        <tr>Book Name</tr>
+    </thead>
+    <tbody>
+        @foreach(var book in ViewBag.booklist)
+        {
+            <tr>
+                <td>@book</td>
+            </tr>
+        }
+    </tbody>
+</table>

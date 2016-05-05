@@ -1,0 +1,11 @@
+﻿@using MvcBootcamp.Web.Models
+
+@model IEnumerable<Customer>
+
+<h3>Company list Partial View</h3>
+<ul>
+    @foreach (var cust in Model)
+    {
+        <li>@cust.CompanyName, @cust.City</li>
+    }
+</ul>

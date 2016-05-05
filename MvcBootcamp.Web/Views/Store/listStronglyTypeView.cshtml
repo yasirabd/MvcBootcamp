@@ -1,0 +1,30 @@
+﻿@model List<MvcBootcamp.Web.Models.Customer>
+@{
+    ViewBag.Title = "listStronglyTypeView";
+}
+
+<h2>listStronglyTypeView</h2>
+
+<table>
+    <thead>
+        <tr>
+            <td>Company Name</td>
+            <td>City</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (MvcBootcamp.Web.Models.Customer list in Model)
+            {
+                <tr>
+                    <td>
+                        @list.CompanyName
+                    </td>
+                    <td>
+                        @list.City
+                    </td>
+                </tr>
+            }
+        </tr>
+    </tbody>
+</table>

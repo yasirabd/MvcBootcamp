@@ -1,0 +1,34 @@
+﻿@*@model MvcBootcamp.Web.Models.Customer*@
+
+@using MvcBootcamp.Web.Models
+
+@model IEnumerable<Customer>
+
+@{ 
+    Layout = null;
+}
+
+@{
+    ViewBag.Title = "StronglyTypeView";
+}
+
+@*<h2>StronglyTypeView</h2>
+
+<p>Company Name : @Model.CompanyName</p>
+<p>City : @Model.City</p>*@
+
+@Styles.Render("~/Content/myStyle")
+
+<h3>Company list</h3>
+<ul>
+    @foreach (var cust in Model)
+    {
+        <li>@cust.CompanyName, @cust.City</li>
+    }
+</ul>
+
+@*cara 1*@
+@Html.Partial("_PartialViewDemo")
+
+@* cara 2 *@
+@{Html.RenderPartial("_PartialViewDemo");}

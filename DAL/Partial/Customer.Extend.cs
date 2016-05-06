@@ -9,6 +9,8 @@ using System.Web.Mvc;
 
 namespace DAL
 {
+    [MetadataType(typeof(CustomerMetadata))]
+
     public partial class Customer
     {
 
@@ -24,7 +26,7 @@ namespace DAL
         public string CustomerID { get; set; }
 
         [Display(Name = "Company Name")]
-        [Required(ErrorMessage = "Company Name harus diisi")]
+        [Required(ErrorMessage = "Company Name tidak boleh kosong")]
         [StringLength(40, ErrorMessage = "Name maks 40 karakter")]
 
         public string CompanyName { get; set; }
